@@ -1,7 +1,7 @@
-library(tidyverse)
+library(dplyr)
+library(tidyr)
 library(ggplot2)
 library(readxl)
-library(dplyr)
 library(ggthemes)
 library(afex) #load afex for running factorial ANOVA
 library(emmeans) #load emmeans for running pairwise comparisons
@@ -12,7 +12,7 @@ library(ica)
 
 #Load data from excel, map to 'data' name
 
-data <- read_excel("Filepath here", col_names = TRUE, col_types = NULL, trim_ws = TRUE)
+data <- read_excel("filepath here", col_names = TRUE, col_types = NULL, trim_ws = TRUE)
 
 # Depending on order of approaches, treatments occur between different assessment points. 
 # I am splitting the participants into their approach orders, creating a column for the correct assessment
